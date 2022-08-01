@@ -8,3 +8,12 @@
 
 - As admins, we want replability to bring and retain customers and create advertisement revenue
 
+## Functional Requirements
+
+- An admin can create and delete paragraph templates
+- An admin can view and update personal info in the "About Us" section
+- A user can input words or phrases of their choosing in forms
+- A user can submit their input and the form will return a fun article with their input included
+- A user can clear the article and their input and be able to do it again with a new article
+- A user can find admins contact information
+
