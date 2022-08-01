@@ -8,3 +8,14 @@
 
 - As admins, we want replability to bring and retain customers and create advertisement revenue
 
+## MVP
+
+- Our Minimum Viable Product is a working Madlib generator that takes the user's input and makes a random generated limerick.
+
+- Our stretch goal would be to add a small-scale battleship-like game that prompts the user for Madlib input when a ship is hit.
+
+- The stretch goal would replace the form to collect user input for the Madlib.
+
+## Data Flow
+
+- The user is asked for input in a form. They can then submit for a random generated Madlib. If they would like, the user can hit reset to generate another random-generated Madlib.
