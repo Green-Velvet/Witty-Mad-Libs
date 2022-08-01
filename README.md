@@ -35,3 +35,7 @@
 4.I as the *client* wants the website to be replayable to encourage repeat traffic
 
 5.I as the *client* wants there to be enough space on the website to display ads for revenue.
+
+## Links and Resources
+
+[Trello Project Manager](https://trello.com/b/Sqy20qrE/madlib)

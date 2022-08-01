@@ -28,7 +28,6 @@
 
 - Never requires account
 
-
 ## Functional Requirements
 
 - An admin can create and delete paragraph templates
@@ -49,4 +48,3 @@
 ## Data Flow
 
 - The user is asked for input in a form. They can then submit for a random generated Madlib. If they would like, the user can hit reset to generate another random-generated Madlib.
-
