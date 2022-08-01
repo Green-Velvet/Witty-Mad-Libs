@@ -28,6 +28,16 @@
 
 - Never requires account
 
+
+## Functional Requirements
+
+- An admin can create and delete paragraph templates
+- An admin can view and update personal info in the "About Us" section
+- A user can input words or phrases of their choosing in forms
+- A user can submit their input and the form will return a fun article with their input included
+- A user can clear the article and their input and be able to do it again with a new article
+- A user can find admins contact information
+
 ## MVP
 
 - Our Minimum Viable Product is a working Madlib generator that takes the user's input and makes a random generated limerick.
@@ -39,3 +49,4 @@
 ## Data Flow
 
 - The user is asked for input in a form. They can then submit for a random generated Madlib. If they would like, the user can hit reset to generate another random-generated Madlib.
+
