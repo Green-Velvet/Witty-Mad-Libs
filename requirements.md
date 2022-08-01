@@ -1,4 +1,6 @@
-# Vision
+# SOFTWARE REQUIREMENTS
+
+## Vision
 
 - Our vision is to entertain the masses.
 
@@ -8,3 +10,20 @@
 
 - As admins, we want replability to bring and retain customers and create advertisement revenue
 
+## Scope
+
+### IN
+
+- Fill out a form.
+
+- User can submit form.
+
+- The page will generate random mad lib
+
+- User can refresh page after mad lib
+
+### OUT
+
+- Never requires log in.
+
+- Never requires account
