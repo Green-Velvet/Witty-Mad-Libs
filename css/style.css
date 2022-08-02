@@ -3,7 +3,7 @@
 }
 
 header {
-  height: 5rem;
+  height: 6rem;
   background-color: bisque;
 }
 
@@ -17,7 +17,7 @@ footer {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 5rem;
   /* font-family: 'Nerko One', cursive; */
   font-family: 'Permanent Marker', cursive;
   /* font-family: 'Sedgwick Ave Display', cursive; */
