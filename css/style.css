@@ -1,3 +1,25 @@
 *{
   box-sizing: border-box;
 }
+
+header {
+  height: 5rem;
+  background-color: bisque;
+}
+
+main {
+  height: auto;
+}
+
+footer {
+  height: 4rem;
+  background-color: bisque;
+}
+
+h1 {
+  font-size: 3rem;
+  /* font-family: 'Nerko One', cursive; */
+  font-family: 'Permanent Marker', cursive;
+  /* font-family: 'Sedgwick Ave Display', cursive; */
+}
+
