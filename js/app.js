@@ -1,17 +1,6 @@
 'use strict';
 // GLOBAL Variables
 
-let madlibArr = [`London ${noun1} is falling down, ${verb1} down, falling down. London Bridge is ${verb2} down, My ${adj1} ${noun2}`, `My teacher came up with an ${adj1} assignment to invent horrendous soup - the most disgusting soup! I called my horrendous soup ${adj2}.  Its main ingredient is  ${noun1} with steamed ${noun2}.`, `Once upon a ${noun1}, there was a boy named Alfred who decided to build a  ${adj1} tree house. He ${verb1} through his yard and picked up all the spare pieces of paper that he could find. He ${verb2} small ones and big ones amd piled them all up the oak tree. He brought everything back with him to the ${noun2} and started building his ${adj2} tree house.`];
-
-
-
-//Global Variables
-let nounArr = [];
-let verbArr = [];
-let adjArr = [];
-const form = document.querySelector('form');
-
-
 let noun1 = 'noun1';
 let noun2 = 'noun2';
 let verb1 = 'verb1';
@@ -19,11 +8,13 @@ let verb2 = 'verb2';
 let adj1 = 'adj1';
 let adj2 = 'adj2';
 
+let madlibArr = [`London ${noun1} is falling down, ${verb1} down, falling down. London Bridge is ${verb2} down, My ${adj1} ${noun2}`, `My teacher came up with an ${adj1} assignment to invent horrendous soup - the most disgusting soup! I called my horrendous soup ${adj2}.  Its main ingredient is  ${noun1} with steamed ${noun2}.`, `Once upon a ${noun1}, there was a boy named Alfred who decided to build a  ${adj1} tree house. He ${verb1} through his yard and picked up all the spare pieces of paper that he could find. He ${verb2} small ones and big ones amd piled them all up the oak tree. He brought everything back with him to the ${noun2} and started building his ${adj2} tree house.`];
 
-
-
-
-
+//Global Variables
+let nounArr = [];
+let verbArr = [];
+let adjArr = [];
+const form = document.querySelector('form');
 
 //Functional Logic
 
@@ -46,18 +37,26 @@ function getRandAdj() {
 function renderMadlib() {
   let container = document.getElementById('madlib');
   let madlib = document.createElement('p');
-  madlib.textContent = madlibArr[getRandMadlib()];
+  let a = getRandMadlib();
+  madlib.textContent = madlibArr[a];
   container.appendChild(madlib);
-  noun1 = nounArr[getRandNoun()];
-  noun2 = nounArr[getRandNoun()];
-  verb1 = verbArr[getRandVerb()];
-  verb2 = verbArr[getRandVerb()];
-  adj1 = adjArr[getRandAdj()];
-  adj2 = adjArr[getRandAdj()];
+  a = getRandNoun();
+  noun1 = nounArr[a];
+  a = getRandNoun();
+  noun2 = nounArr[a];
+  a = getRandVerb();
+  verb1 = verbArr[a];
+  a = getRandVerb();
+  verb2 = verbArr[a];
+  a = getRandAdj();
+  adj1 = adjArr[a];
+  a= getRandAdj();
+  adj2 = adjArr[a];
 }
 
 function handleSubmit(event) {
-  event.preventDefault();
+  console.log('inside handle');
+  // event.preventDefault();
   nounArr.push(event.target.noun1.value);
   nounArr.push(event.target.noun2.value);
   verbArr.push(event.target.verb1.value);
@@ -104,5 +103,4 @@ function getStorage() {
 //Executable Code
 
 getStorage();
-
 renderMadlib();
