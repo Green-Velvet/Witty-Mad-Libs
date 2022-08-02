@@ -1,5 +1,7 @@
 'use strict';
 
+console.log('hi');
+
 //Global Variables
 
 
@@ -36,3 +38,6 @@ function getStorage() {
 
 
 //Executable Code
+
+
+
