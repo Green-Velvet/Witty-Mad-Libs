@@ -5,26 +5,54 @@ let madlibArr = [`London ${noun1} is falling down, ${verb1} down, falling down. 
 
 
 
-function Madlib(pronoun, noun, verb, adv, adj) {
-  this.pronoun = pronoun;
-  this.noun = noun;
-  this.verb = verb;
-  this.adv = adv;
-  this.adj = adj;
+//Global Variables
+let nounArr = [];
+let verbArr = [];
+let adjArr = [];
+const form = document.querySelector('form');
+
+
+
+
+//Functional Logic
+
+function getRandMadlib() {
+  return Math.floor(Math.random() * madlibArr.length);
 }
 
-const form = document.querySelector('form');
+function getRandNoun() {
+  return Math.floor(Math.random() * nounArr.length);
+}
+
+function getRandVerb() {
+  return Math.floor(Math.random() * verbArr.length);
+}
+
+function getRandAdj() {
+  return Math.floor(Math.random() * adjArr.length);
+}
+
+function renderMadlib() {
+  let container = document.getElementById('madlib');
+  let madlib = document.createElement('p');
+  madlib.textContent = madlibArr[getRandMadlib()];
+  container.appendChild(madlib);
+  let noun1 = nounArr[getRandNoun()];
+  let noun2 = nounArr[getRandNoun()];
+  let verb1 = verbArr[getRandVerb()];
+  let verb2 = verbArr[getRandVerb()];
+  let adj1 = adjArr[getRandAdj()];
+  let adj2 = adjArr[getRandAdj()];
+}
 
 function handleSubmit(event) {
   event.preventDefault();
-  let newMadlib = new Madlib(
-    event.target.pronoun.value,
-    event.target.noun.value,
-    event.target.verb.value,
-    event.target.adv.value,
-    event.target.adj.value
-  );
-  newMadlib.render();
+  nounArr.push(event.target.noun1.value);
+  nounArr.push(event.target.noun2.value);
+  verbArr.push(event.target.verb1.value);
+  verbArr.push(event.target.verb2.value);
+  adjArr.push(event.target.adj1.value);
+  adjArr.push(event.target.adj2.value);
 }
 
 form.addEventListener('submit', handleSubmit);
@@ -43,3 +71,5 @@ function getStorage() {
 }
 
 //Executable Code
+
+renderMadlib();
