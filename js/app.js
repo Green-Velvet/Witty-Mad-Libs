@@ -10,12 +10,22 @@ let nounArr = [];
 let verbArr = [];
 let adjArr = [];
 const form = document.querySelector('form');
+<<<<<<< HEAD
 let noun1 = 'noun1';
 let noun2 = 'noun2';
 let verb1 = 'verb1';
 let verb2 = 'verb2';
 let adj1 = 'adj1';
 let adj2 = 'adj2';
+=======
+let noun1 = 'a';
+let noun2 = 'b';
+let verb1 = 'c';
+let verb2 = 'd';
+let adj1 = 'e';
+let adj2 = 'f';
+
+>>>>>>> 64ddd28de9a16da400f273f24abba34210f534c3
 
 
 
@@ -96,5 +106,9 @@ function getStorage() {
 }
 
 //Executable Code
+<<<<<<< HEAD
 getStorage();
+=======
+
+>>>>>>> 64ddd28de9a16da400f273f24abba34210f534c3
 renderMadlib();
