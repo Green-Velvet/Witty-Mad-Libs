@@ -37,10 +37,15 @@ function getRandAdj() {
 function renderMadlib() {
   let container = document.getElementById('madlib');
   let madlib = document.createElement('p');
-  let a = getRandMadlib();
-  madlib.textContent = madlibArr[a];
+
+  madlib.textContent = madlibText();
+
+  // madlib.textContent = [`London ${noun1} is falling down, ${verb1} down, falling down. London Bridge is ${verb2} down, My ${adj1} ${noun2}`, `My teacher came up with an ${adj1} assignment to invent horrendous soup - the most disgusting soup! I called my horrendous soup ${adj2}.  Its main ingredient is  ${noun1} with steamed ${noun2}.`, `Once upon a ${noun1}, there was a boy named Alfred who decided to build a  ${adj1} tree house. He ${verb1} through his yard and picked up all the spare pieces of paper that he could find. He ${verb2} small ones and big ones amd piled them all up the oak tree. He brought everything back with him to the ${noun2} and started building his ${adj2} tree house.`];
   container.appendChild(madlib);
-  a = getRandNoun();
+}
+
+function madlibText() {
+  let a = getRandNoun();
   noun1 = nounArr[a];
   a = getRandNoun();
   noun2 = nounArr[a];
@@ -52,6 +57,8 @@ function renderMadlib() {
   adj1 = adjArr[a];
   a= getRandAdj();
   adj2 = adjArr[a];
+  a = getRandMadlib();
+  return madlibArr[a];
 }
 
 function handleSubmit(event) {
@@ -66,7 +73,6 @@ function handleSubmit(event) {
   updateStorage();
 }
 
-form.addEventListener('submit', handleSubmit);
 
 function updateStorage() {
   const arrayString1 = JSON.stringify(nounArr);
@@ -75,7 +81,7 @@ function updateStorage() {
   localStorage.setItem('noun', arrayString1);
   localStorage.setItem('verb', arrayString2);
   localStorage.setItem('adj', arrayString3);
-
+  
 }
 
 function getStorage() {
@@ -104,3 +110,4 @@ function getStorage() {
 
 getStorage();
 renderMadlib();
+form.addEventListener('submit', handleSubmit);
