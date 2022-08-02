@@ -10,7 +10,12 @@ let nounArr = [];
 let verbArr = [];
 let adjArr = [];
 const form = document.querySelector('form');
-
+let noun1 = 'noun1';
+let noun2 = 'noun2';
+let verb1 = 'verb1';
+let verb2 = 'verb2';
+let adj1 = 'adj1';
+let adj2 = 'adj2';
 
 
 
@@ -37,12 +42,12 @@ function renderMadlib() {
   let madlib = document.createElement('p');
   madlib.textContent = madlibArr[getRandMadlib()];
   container.appendChild(madlib);
-  let noun1 = nounArr[getRandNoun()];
-  let noun2 = nounArr[getRandNoun()];
-  let verb1 = verbArr[getRandVerb()];
-  let verb2 = verbArr[getRandVerb()];
-  let adj1 = adjArr[getRandAdj()];
-  let adj2 = adjArr[getRandAdj()];
+  noun1 = nounArr[getRandNoun()];
+  noun2 = nounArr[getRandNoun()];
+  verb1 = verbArr[getRandVerb()];
+  verb2 = verbArr[getRandVerb()];
+  adj1 = adjArr[getRandAdj()];
+  adj2 = adjArr[getRandAdj()];
 }
 
 function handleSubmit(event) {
@@ -53,23 +58,43 @@ function handleSubmit(event) {
   verbArr.push(event.target.verb2.value);
   adjArr.push(event.target.adj1.value);
   adjArr.push(event.target.adj2.value);
+  updateStorage();
 }
 
 form.addEventListener('submit', handleSubmit);
 
+function updateStorage() {
+  const arrayString1 = JSON.stringify(nounArr);
+  const arrayString2 = JSON.stringify(verbArr);
+  const arrayString3 = JSON.stringify(adjArr);
+  localStorage.setItem('noun', arrayString1);
+  localStorage.setItem('verb', arrayString2);
+  localStorage.setItem('adj', arrayString3);
+
+}
+
 function getStorage() {
   // retrieve data from local storage
-  const data = localStorage.getItem('input');
+  const data1 = localStorage.getItem('noun');
+  const data2 = localStorage.getItem('verb');
+  const data3 = localStorage.getItem('adj');
   // convert the data (array) from a string to something that we can use in JavaScript.
-  const inputData = JSON.parse(data);
+  const inputData1 = JSON.parse(data1);
+  const inputData2 = JSON.parse(data2);
+  const inputData3 = JSON.parse(data3);
 
   // If this is the first time we visit the page, there will not be an array for us to use in localStorage
-  if (inputData !== null) {
-    userInputArr = inputData;
-    // }
+  if (inputData1 !== null) {
+    nounArr = inputData1;
+  }
+  if (inputData2 !== null) {
+    verbArr = inputData2;
+  }
+  if (inputData1 !== null) {
+    adjArr = inputData3;
   }
 }
 
 //Executable Code
-
+getStorage();
 renderMadlib();
