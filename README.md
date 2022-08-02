@@ -22,6 +22,8 @@
 
 ## Wireframes
 
+![wireframe](img/wireframe.jpg)
+
 1.INSERT IMAGES
 
 ## User Stories
