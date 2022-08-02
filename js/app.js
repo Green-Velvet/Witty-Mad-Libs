@@ -1,34 +1,28 @@
 'use strict';
 
-console.log('hi');
-
-// Global Variable
-
-let userInputArr = [];
-let madLibArr = ['London ${noun} Bridge is falling down ${verb} down "," falling down "." London Bridge is ${verb} down"," My fair ${noun}'];
-
-
-
-
-
-
-
-
-//Object Constructors
-
-
-
-//Functional Logic
-
-function getRandom(min, max) {
-  return Math.floor(Math.random() * (max - min) ) + min;
+function Madlib(pronoun, noun, verb, adv, adj) {
+  this.pronoun = pronoun;
+  this.noun = noun;
+  this.verb = verb;
+  this.adv = adv;
+  this.adj = adj;
 }
 
-function updateStorage() {
-  const arrayString = JSON.stringify(userInputArr);
-  console.log(arrayString);
-  localStorage.setItem('input', arrayString);
+const form = document.querySelector('form');
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let newMadlib = new Madlib(
+    event.target.pronoun.value,
+    event.target.noun.value,
+    event.target.verb.value,
+    event.target.adv.value,
+    event.target.adj.value
+  );
+  newMadlib.render();
 }
+
+form.addEventListener('submit', handleSubmit);
 
 function getStorage() {
   // retrieve data from local storage
@@ -43,10 +37,4 @@ function getStorage() {
   }
 }
 
-
-
 //Executable Code
-
-
-
-
