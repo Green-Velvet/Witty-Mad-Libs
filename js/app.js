@@ -1,7 +1,5 @@
 'use strict';
 
-'use strict';
-
 function Madlib(pronoun, noun, verb, adv, adj) {
   this.pronoun = pronoun;
   this.noun = noun;
