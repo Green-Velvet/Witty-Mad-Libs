@@ -10,6 +10,12 @@ let nounArr = [];
 let verbArr = [];
 let adjArr = [];
 const form = document.querySelector('form');
+let noun1 = 'a';
+let noun2 = 'b';
+let verb1 = 'c';
+let verb2 = 'd';
+let adj1 = 'e';
+let adj2 = 'f';
 
 
 
@@ -37,12 +43,12 @@ function renderMadlib() {
   let madlib = document.createElement('p');
   madlib.textContent = madlibArr[getRandMadlib()];
   container.appendChild(madlib);
-  let noun1 = nounArr[getRandNoun()];
-  let noun2 = nounArr[getRandNoun()];
-  let verb1 = verbArr[getRandVerb()];
-  let verb2 = verbArr[getRandVerb()];
-  let adj1 = adjArr[getRandAdj()];
-  let adj2 = adjArr[getRandAdj()];
+  noun1 = nounArr[getRandNoun()];
+  noun2 = nounArr[getRandNoun()];
+  verb1 = verbArr[getRandVerb()];
+  verb2 = verbArr[getRandVerb()];
+  adj1 = adjArr[getRandAdj()];
+  adj2 = adjArr[getRandAdj()];
 }
 
 function handleSubmit(event) {

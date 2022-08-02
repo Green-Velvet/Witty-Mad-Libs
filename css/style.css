@@ -3,12 +3,12 @@
 }
 
 header {
-  height: 6rem;
+  height: 7rem;
   background-color: bisque;
 }
 
 main {
-  height: auto;
+  height: 500px;
 }
 
 footer {
@@ -23,3 +23,9 @@ h1 {
   /* font-family: 'Sedgwick Ave Display', cursive; */
 }
 
+#again, #random {
+  border: 2px solid black;
+  text-decoration: none;
+  color: black;
+  background-color: cadetblue;
+}
