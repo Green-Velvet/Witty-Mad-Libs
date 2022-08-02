@@ -2,30 +2,86 @@
   box-sizing: border-box;
 }
 
+body {
+  margin: 3%;
+}
+
 header {
-  height: 7rem;
-  background-color: bisque;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-around;
 }
 
-main {
-  height: 500px;
-}
-
-footer {
-  height: 4rem;
-  background-color: bisque;
-}
-
-h1 {
-  font-size: 5rem;
-  /* font-family: 'Nerko One', cursive; */
+#logo {
+  border: 1px solid red;
+  width: 75%;
   font-family: 'Permanent Marker', cursive;
-  /* font-family: 'Sedgwick Ave Display', cursive; */
+  display: flex;
+  justify-content: flex-start;
 }
 
-#again, #random {
-  border: 2px solid black;
+#logo img {
+  border-radius: 30%;
+}
+
+#logo a {
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  color: black;
-  background-color: cadetblue;
+}
+
+#logo h1 {
+  border: 1px solid red;
+  justify-content: flex-start;
+  padding-left: 3rem;
+  font-size: 5rem;
+}
+
+#links {
+  border: 1px solid red;
+  width: 25%;
+  padding: 1rem;
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: 'Bangers', cursive;
+  flex-wrap: nowrap;
+}
+
+#links li {
+  display: inline;
+  border: 1px solid red;
+}
+
+#links li a {
+text-decoration: none;
+width: 100%;
+}
+
+#form {
+  width: 30%;
+  margin: auto;
+  margin-top: 2rem;
+  padding: 2rem;
+  border: 1px solid red;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+label {
+  display: block;
+  padding: 1rem;
+}
+
+
+button {
+  margin: 1rem;
+  padding: 1rem;
 }
