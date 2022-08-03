@@ -41,3 +41,4 @@
 ## Links and Resources
 
 [Trello Project Manager](https://trello.com/b/Sqy20qrE/madlib)
+[LearningNerd at LearnTeachCode](https://github.com/LearnTeachCode/Battleship-JavaScript)

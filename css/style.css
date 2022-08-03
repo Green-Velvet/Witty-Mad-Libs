@@ -5,6 +5,23 @@
   box-sizing: border-box;
 }
 
+.battleship-section {
+  display: flex;
+  justify-content: center;
+}
+
+#battleship{
+  display: grid;
+  grid-template-columns: 5rem 5rem 5rem 5rem 5rem;
+  grid-template-rows: 5rem 5rem 5rem 5rem 5rem;
+  border: 10px solid black;
+  background-color: blue;
+  
+ 
+
+}
+
+
 body {
   margin: 3%;
 }
@@ -48,7 +65,7 @@ h1 {
   /* font-family: 'Sedgwick Ave Display', cursive; */
   color:black;
 
-#logo a {
+ #logo a {
   display: flex;
   align-items: center;
   text-decoration: none;
