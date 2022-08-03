@@ -5,7 +5,7 @@
 
 function makeMadlib(noun1, noun2, verb1, verb2, adj1, adj2) {
 
-  let madlibArr = [`London ${noun1} is falling down, ${verb1} down, falling down. London Bridge is ${verb2} down, My ${adj1} ${noun2}`, `My teacher came up with an ${adj1} assignment to invent horrendous soup - the most disgusting soup! I called my horrendous soup ${adj2}.  Its main ingredient is  ${noun1} with steamed ${noun2}.`, `Once upon a ${noun1}, there was a boy named Alfred who decided to build a  ${adj1} tree house. He ${verb1} through his yard and picked up all the spare pieces of paper that he could find. He ${verb2} small ones and big ones amd piled them all up the oak tree. He brought everything back with him to the ${noun2} and started building his ${adj2} tree house.`];
+  let madlibArr = [`${noun1} is ${verb1} down, ${verb1} down, ${verb1} down. ${noun1} is ${verb1} down, My ${adj1} ${noun2}`, `My ${noun1} came up with a ${adj1} idea to ${verb1} ${adj1} soup - the most ${adj2} soup! I called my ${adj1} soup ${adj2}.  Its main ingredient is ${noun2}.`, `To ${verb1} or not to ${verb1}, that is the ${noun1}.`, `Life is like a ${noun1}, you never know what you're gonna ${verb1}.`, `Isn't it ${adj1}, all alone, ${noun1} made of ${adj2}, my ${noun2} of stone.`, `I've been ${verb1} ${noun1} and ${verb2} ${noun2} man, I feel just like a rockstar.`, `She ${verb1} ${adj1} ${noun1} by the ${adj2} ${verb2} ${noun2}.`, `When you ${verb1} upon a ${adj1} ${noun1}, your dreams come ${verb2} ${adj2}.`, `${verb1} my ${adj1} ${noun1} name out of your ${adj2} ${noun2}!`];
   let random = getRandMadlib(madlibArr.length);
   return madlibArr[random];
 }

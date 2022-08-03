@@ -27,7 +27,6 @@ header {
   border-radius: 30%;
 }
 
-
 footer {
   clear: both;
   height: 80px;
@@ -40,13 +39,16 @@ footer {
   background-color: bisque;
   color:black;
 }
+
 /* Both html style */
+
 h1 {
   font-size: 5rem;
   /* font-family: 'Nerko One', cursive; */
   font-family: 'Permanent Marker', cursive;
   /* font-family: 'Sedgwick Ave Display', cursive; */
   color:black;
+}
 
 #logo a {
   display: flex;
@@ -105,10 +107,31 @@ label {
   padding: 1rem;
 }
 
+fieldset {
+  font-size: 2rem;
+}
+
+label input {
+  font-size: 30px;
+}
+
 
 button {
+  font-size: 2rem;
   margin: 1rem;
   padding: 1rem;
+  border-radius: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  color: green;
+}
+
+button:active{
+  font-size: 1.5rem;
+}
+
+#madlib {
+  font-size: 30px;
 }
 
 /* about html */
@@ -123,6 +146,7 @@ button {
   left:80px; top:2px;
   color: white;
 }
+
 .bio-info-jeff {
   font-family: 'Ibarra Real Nova', serif;
 }
