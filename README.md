@@ -41,3 +41,7 @@
 ## Links and Resources
 
 [Trello Project Manager](https://trello.com/b/Sqy20qrE/madlib)
+
+## Acknowledgements
+
+Big thanks to Shayla and Michael for their invaluable input! Couldn't have done it without you!

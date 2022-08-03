@@ -39,32 +39,36 @@
       <!-- action="madlib.html" -->
       <form>
         <fieldset>
-          <legend>Fill in the Blanks!</legend><br>
-          <label>Noun1
+          <legend></legend><br>
+          <label>
             <input type="text"  name="noun1" placeholder="Noun" id="noun1">
           </label>
-          <label>Noun2
+          <label>
             <input type="text" name="noun2" placeholder="Noun" id="noun2">
           </label>
-          <label>Verb1
+          <label>
             <input type="text" name="verb1" placeholder="Verb" id="verb1">
           </label>
-          <label>Verb2
+          <label>
             <input type="text" name="verb2" placeholder="Verb" id="verb2">
           </label>
-          <label>Adjective1
+          <label>
             <input type="text" name="adj1" placeholder="Adjective" id="adj1">
           </label>
-          <label>Adjective2
+          <label>
             <input type="text" name="adj2" placeholder="Adjective" id="adj2">
           </label>
-          <button type="submit">Gimme Gimme</button>
+          <button type="submit" onclick="audio.play();" >Gimme Gimme</button>
         </fieldset>
       </form>
     </div>
     <div id="madlib"><div>
     </main>
   <footer></footer>
+  <script type="text/javascript">
+    const audio = new Audio();
+    audio.src = "clown-horn.mp3";
+  </script>
   <script src="js/app.js"></script>
 </body>
 
