@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Ibarra+Real+Nova&display=swap');
 
 
-*{
+* {
   box-sizing: border-box;
 }
 
@@ -51,10 +51,10 @@ footer {
   text-align: left;
   margin: 0px 0px 0px 0px;
   font-family: arial, helvetica;
-  font-weight: bold ;
+  font-weight: bold;
   font-size: 20px;
   background-color: bisque;
-  color:black;
+  color: black;
 }
 
 /* Both html style */
@@ -64,6 +64,7 @@ h1 {
   /* font-family: 'Nerko One', cursive; */
   font-family: 'Permanent Marker', cursive;
   /* font-family: 'Sedgwick Ave Display', cursive; */
+  
   color:black;
 }
 
