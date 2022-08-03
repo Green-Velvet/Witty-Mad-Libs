@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Ibarra+Real+Nova&display=swap');
 
-
 * {
   box-sizing: border-box;
 }
@@ -16,9 +15,6 @@
   grid-template-rows: 5rem 5rem 5rem 5rem 5rem;
   border: 10px solid black;
   background-color: blue;
-  
- 
-
 }
 
 
@@ -64,7 +60,6 @@ h1 {
   /* font-family: 'Nerko One', cursive; */
   font-family: 'Permanent Marker', cursive;
   /* font-family: 'Sedgwick Ave Display', cursive; */
-  
   color:black;
 }
 
@@ -79,7 +74,6 @@ h1 {
   justify-content: flex-start;
   padding-left: 3rem;
   font-size: 5rem;
-
 }
 
 #links {
@@ -117,7 +111,6 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 
 label {
@@ -132,7 +125,6 @@ fieldset {
 label input {
   font-size: 30px;
 }
-
 
 button {
   font-size: 2rem;
@@ -167,4 +159,19 @@ button:active{
 
 .bio-info-jeff {
   font-family: 'Ibarra Real Nova', serif;
+}
+
+#madmain {
+  height: 500px;
+}
+
+#footmain {
+  height: 90px;
+}
+
+audio {
+  background-color: transparent;
+  border: solid darkcyan;
+  border-radius: 25px;
+  margin-top: 17px;
 }
