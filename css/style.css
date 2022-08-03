@@ -1,9 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Ibarra+Real+Nova&display=swap');
 
-
-*{
+* {
   box-sizing: border-box;
 }
+
+.battleship-section {
+  display: flex;
+  justify-content: center;
+}
+
+#battleship{
+  display: grid;
+  grid-template-columns: 5rem 5rem 5rem 5rem 5rem;
+  grid-template-rows: 5rem 5rem 5rem 5rem 5rem;
+  border: 10px solid black;
+  background-color: blue;
+}
+
 
 body {
   margin: 3%;
@@ -34,10 +47,10 @@ footer {
   text-align: left;
   margin: 0px 0px 0px 0px;
   font-family: arial, helvetica;
-  font-weight: bold ;
+  font-weight: bold;
   font-size: 20px;
   background-color: bisque;
-  color:black;
+  color: black;
 }
 
 /* Both html style */
@@ -50,7 +63,7 @@ h1 {
   color:black;
 }
 
-#logo a {
+ #logo a {
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -61,7 +74,6 @@ h1 {
   justify-content: flex-start;
   padding-left: 3rem;
   font-size: 5rem;
-
 }
 
 #links {
@@ -99,7 +111,6 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 
 label {
@@ -114,7 +125,6 @@ fieldset {
 label input {
   font-size: 30px;
 }
-
 
 button {
   font-size: 2rem;
