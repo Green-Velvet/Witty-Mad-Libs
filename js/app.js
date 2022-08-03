@@ -5,7 +5,7 @@
 
 function makeMadlib(noun1, noun2, verb1, verb2, adj1, adj2) {
 
-  let madlibArr = [`London ${noun1} is falling down, ${verb1} down, falling down. London Bridge is ${verb2} down, My ${adj1} ${noun2}`, `My teacher came up with an ${adj1} assignment to invent horrendous soup - the most disgusting soup! I called my horrendous soup ${adj2}.  Its main ingredient is  ${noun1} with steamed ${noun2}.`, `Once upon a ${noun1}, there was a boy named Alfred who decided to build a  ${adj1} tree house. He ${verb1} through his yard and picked up all the spare pieces of paper that he could find. He ${verb2} small ones and big ones amd piled them all up the oak tree. He brought everything back with him to the ${noun2} and started building his ${adj2} tree house.`];
+  let madlibArr = [`London ${noun1} is going to ${verb2} ${adj2}, My ${adj1} ${noun2}`, `My ${noun1} came up with ${adj1} ideas to ${verb1} the ${noun2} - the ${adj2}, ${adj2} ${noun2}.`, `Once upon a ${adj1} time, Alfred, the ${noun1}, decided to build a ${adj2} house made of ${noun2}. `,`Don't ${verb1} about a ${noun1}, because every ${adj1} ${noun2} is gonna be ${adj2}`,`Don't be ${adj1}, ${noun2}. The only ${noun1} to ${verb1} is ${noun1}, itself.`,`Go ${verb1} the ${noun1} everywhere you go. Let no ${noun2} ever ${verb2} without feeling ${adj1}.`];
   let random = getRandMadlib(madlibArr.length);
   return madlibArr[random];
 }
