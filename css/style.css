@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Ibarra+Real+Nova&display=swap');
+
+
 *{
   box-sizing: border-box;
 }
@@ -24,6 +27,27 @@ header {
   border-radius: 30%;
 }
 
+
+footer {
+  clear: both;
+  height: 80px;
+  width: 1800px;
+  text-align: left;
+  margin: 0px 0px 0px 0px;
+  font-family: arial, helvetica;
+  font-weight: bold ;
+  font-size: 20px;
+  background-color: bisque;
+  color:black;
+}
+/* Both html style */
+h1 {
+  font-size: 5rem;
+  /* font-family: 'Nerko One', cursive; */
+  font-family: 'Permanent Marker', cursive;
+  /* font-family: 'Sedgwick Ave Display', cursive; */
+  color:black;
+
 #logo a {
   display: flex;
   align-items: center;
@@ -35,6 +59,7 @@ header {
   justify-content: flex-start;
   padding-left: 3rem;
   font-size: 5rem;
+
 }
 
 #links {
@@ -84,4 +109,20 @@ label {
 button {
   margin: 1rem;
   padding: 1rem;
+}
+
+/* about html */
+
+.background-img{
+  /* img from fabio on unplash free picture to use */
+  background-image: url('/img/background-fabio-oyXis2kALVg-unsplash.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-shadow: white 0px 0px 2px;
+  position:relative; 
+  left:80px; top:2px;
+  color: white;
+}
+.bio-info-jeff {
+  font-family: 'Ibarra Real Nova', serif;
 }
