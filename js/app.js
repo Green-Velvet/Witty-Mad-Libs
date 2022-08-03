@@ -6,7 +6,7 @@
 function makeMadlib(noun1, noun2, verb1, verb2, adj1, adj2) {
 
   let madlibArr = [`London ${noun1} is falling down, ${verb1} down, falling down. London Bridge is ${verb2} down, My ${adj1} ${noun2}`, `My teacher came up with an ${adj1} assignment to invent horrendous soup - the most disgusting soup! I called my horrendous soup ${adj2}.  Its main ingredient is  ${noun1} with steamed ${noun2}.`, `Once upon a ${noun1}, there was a boy named Alfred who decided to build a  ${adj1} tree house. He ${verb1} through his yard and picked up all the spare pieces of paper that he could find. He ${verb2} small ones and big ones amd piled them all up the oak tree. He brought everything back with him to the ${noun2} and started building his ${adj2} tree house.`];
-  let random = getRandMadlib(madlibArr.length)
+  let random = getRandMadlib(madlibArr.length);
   return madlibArr[random];
 }
 
@@ -55,26 +55,8 @@ function renderMadlib() {
   let madlib = document.createElement('p');
   madlib.textContent = makeMadlib(noun1, noun2, verb1, verb2, adj1, adj2);
 
-  // madlib.textContent = [`London ${noun1} is falling down, ${verb1} down, falling down. London Bridge is ${verb2} down, My ${adj1} ${noun2}`, `My teacher came up with an ${adj1} assignment to invent horrendous soup - the most disgusting soup! I called my horrendous soup ${adj2}.  Its main ingredient is  ${noun1} with steamed ${noun2}.`, `Once upon a ${noun1}, there was a boy named Alfred who decided to build a  ${adj1} tree house. He ${verb1} through his yard and picked up all the spare pieces of paper that he could find. He ${verb2} small ones and big ones amd piled them all up the oak tree. He brought everything back with him to the ${noun2} and started building his ${adj2} tree house.`];
   container.appendChild(madlib);
 }
-
-// function madlibText() {
-//   let a = getRandNoun();
-//   noun1 = nounArr[a];
-//   a = getRandNoun();
-//   noun2 = nounArr[a];
-//   a = getRandVerb();
-//   verb1 = verbArr[a];
-//   a = getRandVerb();
-//   verb2 = verbArr[a];
-//   a = getRandAdj();
-//   adj1 = adjArr[a];
-//   a= getRandAdj();
-//   adj2 = adjArr[a];
-//   a = getRandMadlib();
-//   return madlibArr[a];
-// }
 
 function handleSubmit(event) {
   console.log('inside handle');
