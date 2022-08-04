@@ -79,7 +79,6 @@ footer {
   font-family: arial, helvetica;
   font-weight: bold;
   font-size: 20px;
-  background-color: bisque;
   color: black;
 }
 
@@ -201,6 +200,13 @@ button:active{
   font-size: 30px;
 }
 
+audio {
+  background-color: transparent;
+  border: solid darkcyan;
+  border-radius: 25px;
+  margin-top: 17px;
+}
+
 /* about html */
 
 .background-img {
@@ -208,20 +214,84 @@ button:active{
   background-image: url('/img/background-fabio-oyXis2kALVg-unsplash.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
   text-shadow: white 0px 0px 2px;
-  position: relative;
   left: 80px;
   top: 2px;
   color: white;
+  font-size: 2rem;
 }
 
 .bio-info-jeff {
   font-family: 'Ibarra Real Nova', serif;
 }
 
-audio {
-  background-color: transparent;
-  border: solid darkcyan;
-  border-radius: 25px;
-  margin-top: 17px;
+#abouthead {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+li a {
+  color: white;
+  text-decoration: none;
+} 
+
+a:hover {
+  font-size: 2.75rem;
+}
+
+#abouth1 {
+  color: white;
+
+}
+
+#aboutmain {
+  margin: 10px 10px 10px 10px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+}
+
+#bert {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+#bert img {
+  margin-right: 10px;
+  height: 460px;
+  width: 400px;
+  border-radius: 20px;
+  float: left;
+}
+
+#carlos {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+#jordan {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+#jeff {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+#aboutfoot {
+  margin-top: 1rem;
+  font-size: 2rem;
+  color: white;
 }
