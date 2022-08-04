@@ -103,5 +103,5 @@ function getStorage() {
 //Executable Code
 
 getStorage();
-// renderMadlib();
-// form.addEventListener('submit', handleSubmit);
+renderMadlib();
+form.addEventListener('submit', handleSubmit);
