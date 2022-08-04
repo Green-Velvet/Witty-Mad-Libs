@@ -85,10 +85,10 @@ function fireTorpedo(e) {
         verbArr.push(prompt('You sunk another one, Matey! A VERB is what we want.'));
       } else if (userCount === 3) {
         userCount--;
-        verbArr.push(prompt("Aargh, yet another good ship sunk! We'll be wanting another VERB you."));
+        verbArr.push(prompt("Aargh, yet another good ship sunk! We'll be wanting another VERB from you."));
       } else if (userCount === 2) {
         userCount--;
-        adjArr.push(prompt("Avast, Landlubber! You're really shaking down my crew. This time, I was an ADJECTIVE from you."));
+        adjArr.push(prompt("Avast, Landlubber! You're really shaking down me crew. This time, I want an ADJECTIVE from you."));
       } else if (userCount === 1) {
         userCount--;
         adjArr.push(prompt("Davey Jones claims the last ship! One last ADJECTIVE wouldn't be to much to ask for, would it?"));
@@ -113,16 +113,8 @@ function fireTorpedo(e) {
 
 function randomButton(e){
   e.preventDefault();
-  let message = getElementById('demo:first-child');
+  let message = document.querySelector('#madlib p');
   message.remove();
   renderMadlib();
 }
 
-function stripTags (original) {
-  // (A1) CREATE DUMMY ELEMENT & ATTACH HTML
-  let ele = document.createElement("div");
-  ele.innerHTML = original;
- 
-  // (A2) USE TEXT CONTENT TO STRIP TAGS
-  return ele.textContent;
-}
