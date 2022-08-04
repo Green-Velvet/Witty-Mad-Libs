@@ -14,17 +14,20 @@ body {
 
 
 #battleshipAnimation {
-  display: flex;
+  display: none;
   justify-content: center;
-  background: url(https://www.publicdomainpictures.net/pictures/180000/velka/wooden-boat-in-a-stormy-sea.jpg);
+  /* background: url(https://images.unsplash.com/photo-1466188635785-8b5f35009981?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80); */
   background-size: contain;
-  position: relative;
-  top: 30px;
-  /*animation: slide-in forwards .6s;*/
-  z-index: +1;
+  /* position: relative; */
+  /* top: 30px; */
 }
 
-.battleship-section {
+#battleshipAnimation.gridAppears {
+  display: flex;
+}
+
+#battleshipAnimation.battleship-section {
+  display: flex;
   animation: slide-in forwards .6s;
 }
 
@@ -34,11 +37,12 @@ body {
   }
 
   to {
-    transform: translateY(-150%);
+    transform: translateY(-125%);
   }
 }
 
 #battleship {
+  margin: 2rem;
   background: url(/img/water-81.gif);
   display: grid;
   grid-template-columns: repeat(5, 5rem);
@@ -56,6 +60,15 @@ body {
   border: 3px solid whitesmoke;
 }
 
+.battleship-section {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 header {
   border: 1px solid black;
   display: flex;
@@ -63,7 +76,6 @@ header {
 }
 
 #logo {
-  border: 1px solid red;
   width: 75%;
   font-family: 'Permanent Marker', cursive;
   display: flex;
@@ -74,7 +86,21 @@ header {
   border-radius: 30%;
 }
 
-footer {
+.logoImgSlide {
+  animation: slide-right forwards 8s;
+}
+
+@keyframes slide-right {
+  from {
+    transform: translateX(-1000%);
+  }
+
+  to {
+    transform: translateX(10%);
+  }
+}
+
+.lo footer {
   clear: both;
   height: 80px;
   width: 1800px;
@@ -103,14 +129,12 @@ h1 {
 }
 
 #logo h1 {
-  border: 1px solid red;
   justify-content: flex-start;
   padding-left: 3rem;
   font-size: 5rem;
 }
 
 #links {
-  border: 1px solid red;
   width: 25%;
   padding: 1rem;
   font-size: 2.5rem;
@@ -123,7 +147,6 @@ h1 {
 
 #links li {
   display: inline;
-  border: 1px solid red;
 }
 
 #links li a {
@@ -136,13 +159,10 @@ h1 {
   margin: auto;
   margin-top: 2rem;
   padding: 2rem;
-  border: 1px solid red;
-  z-index: -1;
 }
 
 .formAnimation {
   animation: goAway forwards 1.2s;
-
 }
 
 @keyframes goAway {
@@ -163,12 +183,15 @@ form {
 }
 
 label {
-  display: block;
   padding: 1rem;
 }
 
 fieldset {
+  color: white;
   font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 label input {
@@ -195,7 +218,7 @@ button {
   color: green;
 }
 
-button:active{
+button:active {
   font-size: 1.5rem;
 }
 
@@ -213,9 +236,9 @@ audio {
 /* about html */
 
 html {
-  margin:0;
-  padding:0;
-  overflow-x:hidden;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 .background-img {
@@ -227,8 +250,8 @@ html {
   text-shadow: black 1px 1px px;
   left: 80px;
   top: 2px;
-  color:white;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1.3rem;
   font-weight: bold;
   -webkit-text-stroke: 1px black;
@@ -253,7 +276,7 @@ li a {
   color: darkgoldenrod;
   text-decoration: none;
   -webkit-text-stroke: 1px black;
-} 
+}
 
 a:hover {
   font-size: 2rem;
