@@ -85,7 +85,7 @@ footer {
 /* Both html style */
 
 h1 {
-  font-size: 5rem;
+  font-size: 4rem;
   /* font-family: 'Nerko One', cursive; */
   font-family: 'Permanent Marker', cursive;
   /* font-family: 'Sedgwick Ave Display', cursive; */
@@ -192,7 +192,6 @@ button {
 }
 
 button:active{
-
   font-size: 1.5rem;
 }
 
@@ -210,16 +209,21 @@ audio {
 /* about html */
 
 .background-img {
-  /* img from fabio on unplash free picture to use */
-  background-image: url('/img/background-fabio-oyXis2kALVg-unsplash.jpg');
+  /* img from Sophia on unplash free picture to use */
+  background-image: url('/img/map.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
   text-shadow: white 0px 0px 2px;
   left: 80px;
   top: 2px;
-  color: white;
-  font-size: 2rem;
+  color: black;
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+#back {
+  font-size: 1.5rem;
 }
 
 .bio-info-jeff {
@@ -227,7 +231,7 @@ audio {
 }
 
 #abouthead {
-  height: 200px;
+  height: 120px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -239,7 +243,7 @@ li a {
 } 
 
 a:hover {
-  font-size: 2.75rem;
+  font-size: 1.75rem;
 }
 
 #abouth1 {
@@ -263,8 +267,9 @@ a:hover {
 
 #bert img {
   margin-right: 10px;
-  height: 460px;
-  width: 400px;
+  margin-bottom: 10px;
+  height: 260px;
+  width: 200px;
   border-radius: 20px;
   float: left;
 }
@@ -276,11 +281,28 @@ a:hover {
   grid-row-end: 3;
 }
 
+#carlos img {
+  margin-right: 10px;
+  margin-top: 10px;
+  height: 260px;
+  width: 200px;
+  border-radius: 20px;
+  float: left;
+}
+
 #jordan {
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 2;
+}
+
+#jordan img {
+  margin-right: 10px;
+  height: 260px;
+  width: 200px;
+  border-radius: 20px;
+  float: right;
 }
 
 #jeff {
@@ -290,8 +312,16 @@ a:hover {
   grid-row-end: 3;
 }
 
+#jeff img {
+  margin-right: 10px;
+  height: 260px;
+  width: 200px;
+  border-radius: 20px;
+  float: right;
+}
+
 #aboutfoot {
   margin-top: 1rem;
-  font-size: 2rem;
+  font-size: 1rem;
   color: white;
 }
