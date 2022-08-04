@@ -4,7 +4,6 @@
 let rows = 5;
 let cols = 5;
 
-
 const grid = document.getElementById('battleship');
 
 for (let i = 0; i < cols; i++) {
@@ -29,9 +28,9 @@ let gameBoard = [
   [0, 0, 0, 0, 1],
   [0, 0, 1, 0, 0],
   [0, 0, 0, 0, 1],
-]
+];
 
-grid.addEventListener("click", fireTorpedo, false);
+grid.addEventListener('click', fireTorpedo, false);
 
 function fireTorpedo(e) {
   if (e.target !== e.currentTarget) {
@@ -51,10 +50,10 @@ function fireTorpedo(e) {
       hitCount++;
 
       if (hitCount === 6) {
-        alert("All enemy battleships have been defeated! You win!");
+        alert('All enemy battleships have been defeated! You win!');
       }
     } else if (gameBoard[row][col] > 1) {
-      alert("Stop wasting your torpedos! You already fired at this location.");
+      alert('Stop wasting your torpedos! You already fired at this location.');
     }
   }
   e.stopPropagation();
