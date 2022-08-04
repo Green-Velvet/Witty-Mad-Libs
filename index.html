@@ -22,8 +22,8 @@
   <header>
     <div id="logo">
       <a href="#">
-        <img src="img/logo.jpg" width="300px" height="250px">
-        <h1>Mad Libs</h1>
+        <img id="logoImg" src="img/Piratey.jpg" width="300px" height="250px">
+        <h1>Madlib on the High Seas</h1>
       </a>
     </div>
     <nav id="links">
@@ -37,7 +37,7 @@
     <div id="form">
       <form>
         <fieldset>
-          <legend></legend><br>
+          <legend>Fill out the forms!</legend><br>
           <label>
             <input type="text" name="noun1" placeholder="Noun" id="noun1">
           </label>
@@ -57,21 +57,27 @@
             <input type="text" name="adj2" placeholder="Adjective" id="adj2">
           </label>
           <button type="submit">Gimme Gimme</button>
-          <input id="reset" type="reset">
-          <button id="random" type="submit">Feeling Lucky Punk?</button>
+          <!-- <input id="reset" type="reset">
+          <button id="random" type="submit">Feeling Lucky Punk?</button> -->
         </fieldset>
       </form>
     </div>
+
 
     <section  id="battleshipAnimation">  
       <div class="directions-box">
         <p id="directions">Go on, Landlubber! Try to find me ships.</p>
       </div>    
       <div id="battleship" onclick="audio.play();"></div>
-      <div><audio controls autoplay loop>
+
+      <div id="audioControl">
+        <audio controls autoplay loop>
+
           <source src="/sounds/waves-crashing.wav" type="audio/wav">Unsupported Audio.
-        </audio></div>
+        </audio>
+      </div>
     </section>
+
     <section id="madbox">
     <div id="madlib"><div>
       <button id="random2" type="submit">Random</button>
