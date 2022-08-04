@@ -15,33 +15,31 @@
     rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <header>
     <div id="logo">
       <a href="#">
-        <img src="img/logo.jpg" width="300px"
-        height="250px">
+        <img src="img/logo.jpg" width="300px" height="250px">
         <h1>Mad Libs</h1>
       </a>
     </div>
     <nav id="links">
       <ul>
         <li id="gtku"><a href="about.html">Get To Know Us</a></li>
-        <li id="stte"><a href="madlib.html">Skip To The End</a></li>
       </ul>
     </nav>
   </header>
   </header>
   <main>
     <div id="form">
-      <!-- action="madlib.html" -->
       <form>
         <fieldset>
           <legend></legend><br>
           <label>
-            <input type="text"  name="noun1" placeholder="Noun" id="noun1">
+            <input type="text" name="noun1" placeholder="Noun" id="noun1">
           </label>
           <label>
             <input type="text" name="noun2" placeholder="Noun" id="noun2">
@@ -58,19 +56,27 @@
           <label>
             <input type="text" name="adj2" placeholder="Adjective" id="adj2">
           </label>
-          <button type="submit" onclick="audio.play();" >Gimme Gimme</button>
+          <button type="submit">Gimme Gimme</button>
+          <input id="reset" type="reset">
+          <button id="random" type="submit">Feeling Lucky Punk?</button>
         </fieldset>
       </form>
     </div>
-    <section  id="battleshipAnimation">
-      <div id="battleship"></div>
-    </section> 
+
+    <section  id="battleshipAnimation">      
+      <div id="battleship" onclick="audio.play();"></div>
+      <div><audio controls autoplay loop>
+          <source src="/sounds/waves-crashing.wav" type="audio/wav">Unsupported Audio.
+        </audio></div>
+    </section>
+
     <div id="madlib"><div>
-    </main>
-  <footer></footer>
+  </main>
+  <footer>
+  </footer>
   <script type="text/javascript">
     const audio = new Audio();
-    audio.src = "/sounds/water-drop-stone.wav";
+    audio.src = "/sounds/water-bomb.wav";
   </script>
   <script src="js/app.js"></script>
   <script src="js/battleship.js"></script>

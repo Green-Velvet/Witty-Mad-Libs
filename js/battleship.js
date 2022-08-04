@@ -4,6 +4,9 @@
 let rows = 5;
 let cols = 5;
 
+let ships = 6;
+let userCount = 6;
+
 
 const grid = document.getElementById('battleship');
 
@@ -24,14 +27,35 @@ for (let i = 0; i < cols; i++) {
 let hitCount = 0;
 
 let gameBoard = [
-  [0, 0, 0, 1, 1],
-  [0, 1, 0, 0, 0],
-  [0, 0, 0, 0, 1],
-  [0, 0, 1, 0, 0],
-  [0, 0, 0, 0, 1],
+
+  [0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0],
 ];
 
-grid.addEventListener("click", fireTorpedo, false);
+randomShips();
+
+// console.log(gameBoard[2][2]);
+function randomShips() {
+  for (let i = 0; i < ships; i++) {
+    let row = getRandNum(gameBoard.length);
+    let col = getRandNum(gameBoard.length);
+    if (gameBoard[row][col] === 0) {
+      gameBoard[row][col] = 1;
+
+    } else {
+      i--;
+    }
+  }
+}
+
+function getRandNum(max) {
+  return Math.floor(Math.random() * max);
+}
+
+grid.addEventListener('click', fireTorpedo, false);
 
 function fireTorpedo(e) {
   if (e.target !== e.currentTarget) {
@@ -45,17 +69,40 @@ function fireTorpedo(e) {
 
     } else if (gameBoard[row][col] === 1) {
       e.target.style.background = 'red';
-
+      if (userCount === 6) {
+        userCount--;
+        nounArr.push(prompt('Ahoy! Good shot! Now give us a NOUN.'));
+      }
+      else if (userCount === 5) {
+        userCount--;
+        nounArr.push(prompt('Another good shot! Now hand us another NOUN.'));
+      } else if (userCount === 4) {
+        userCount--;
+        verbArr.push(prompt('You sunk another one, Matey! A VERB is what we want.'));
+      } else if (userCount === 3) {
+        userCount--;
+        verbArr.push(prompt("Aargh, yet another good ship sunk! We'll be wanting another VERB you."));
+      } else if (userCount === 2) {
+        userCount--;
+        adjArr.push(prompt("Avast, Landlubber! You're really shaking down my crew. This time, I was an ADJECTIVE from you."));
+      } else if (userCount === 1) {
+        userCount--;
+        adjArr.push(prompt("Davey Jones claims the last ship! One last ADJECTIVE wouldn't be to much to ask for, would it?"));
+      }
       gameBoard[row][col] = 2;
 
       hitCount++;
 
       if (hitCount === 6) {
         alert("All enemy battleships have been defeated! You win!");
+        renderMadlib();
+        updateStorage();
+
       }
     } else if (gameBoard[row][col] > 1) {
-      alert("Stop wasting your torpedos! You already fired at this location.");
+      alert('Stop wasting your torpedos! You already fired at this location.');
     }
   }
+  
   e.stopPropagation();
 }

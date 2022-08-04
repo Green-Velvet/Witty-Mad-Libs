@@ -182,7 +182,18 @@ button {
   color: green;
 }
 
-button:active {
+#reset {
+  font-size: 2rem;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  color: green;
+}
+
+button:active{
+
   font-size: 1.5rem;
 }
 
@@ -206,14 +217,6 @@ button:active {
 
 .bio-info-jeff {
   font-family: 'Ibarra Real Nova', serif;
-}
-
-#madmain {
-  height: 500px;
-}
-
-#footmain {
-  height: 90px;
 }
 
 audio {
