@@ -5,7 +5,11 @@
 }
 
 body {
-  background-color: red;
+  background-color: darkcyan;
+  background-image: url('/img/Ocean-Whale.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
 }
 
 
@@ -208,28 +212,35 @@ audio {
 
 /* about html */
 
+html {
+  margin:0;
+  padding:0;
+  overflow-x:hidden;
+}
+
 .background-img {
-  /* img from Sophia on unplash free picture to use */
-  background-image: url('/img/map.jpg');
+  /* background-color: darkcyan;
+  background-image: url('/img/Ocean-Whale.png');
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
-  width: 100vh;
-  text-shadow: white 0px 0px 2px;
+  height: 100vh; */
+  text-shadow: black 1px 1px px;
   left: 80px;
   top: 2px;
-  color: black;
-  font-size: 1.15rem;
-  font-weight: 800;
+  color:white;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  -webkit-text-stroke: 1px black;
 }
 
 #back {
   font-size: 1.5rem;
 }
 
-.bio-info-jeff {
+/* .bio-info-jeff {
   font-family: 'Ibarra Real Nova', serif;
-}
+} */
 
 #abouthead {
   height: 120px;
@@ -239,24 +250,25 @@ audio {
 }
 
 li a {
-  color: white;
+  color: darkgoldenrod;
   text-decoration: none;
+  -webkit-text-stroke: 1px black;
 } 
 
 a:hover {
-  font-size: 2.75rem;
+  font-size: 2rem;
 }
 
 #abouth1 {
-  color: white;
+  color: goldenrod;
 
 }
 
 #aboutmain {
   margin: 10px 10px 10px 10px;
   display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 50% 50%;
+  grid-template-columns: 47% 6% 47%;
+  grid-template-rows: 40% 20% 40%;
 }
 
 #bert {
@@ -278,8 +290,8 @@ a:hover {
 #carlos {
   grid-column-start: 1;
   grid-column-end: 2;
-  grid-row-start: 2;
-  grid-row-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
 }
 
 #carlos img {
@@ -292,8 +304,8 @@ a:hover {
 }
 
 #jordan {
-  grid-column-start: 2;
-  grid-column-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 2;
 }
@@ -306,11 +318,15 @@ a:hover {
   float: right;
 }
 
+#jordan a {
+  margin-bottom: 10px;
+}
+
 #jeff {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 2;
-  grid-row-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
 }
 
 #jeff img {
@@ -322,7 +338,11 @@ a:hover {
 }
 
 #aboutfoot {
+  /* font-family:'Nerko One', cursive; */
+  -webkit-text-stroke: 1px black;
+  height: fit-content;
   margin-top: 1rem;
-  font-size: 1rem;
-  color: white;
+  margin-bottom: 1rem;
+  font-size: 1.7rem;
+  color: lightcoral;
 }
