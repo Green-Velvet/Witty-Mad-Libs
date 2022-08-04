@@ -4,22 +4,52 @@
   box-sizing: border-box;
 }
 
-.battleship-section {
-  display: flex;
-  justify-content: center;
+body {
+  background-color: red;
 }
 
-#battleship{
+
+#battleshipAnimation {
+  display: flex;
+  justify-content: center;
+  background: url(https://www.publicdomainpictures.net/pictures/180000/velka/wooden-boat-in-a-stormy-sea.jpg);
+  background-size: contain;
+  position: relative;
+  top: 30px;
+  /*animation: slide-in forwards .6s;*/
+  z-index: +1;
+}
+
+.battleship-section {
+  animation: slide-in forwards .6s;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(120%);
+  }
+
+  to {
+    transform: translateY(-150%);
+  }
+}
+
+#battleship {
+  background: url(/img/water-81.gif);
   display: grid;
-  grid-template-columns: 5rem 5rem 5rem 5rem 5rem;
-  grid-template-rows: 5rem 5rem 5rem 5rem 5rem;
+  grid-template-columns: repeat(5, 5rem);
+  grid-template-rows: repeat(5, 5rem);
   border: 10px solid black;
   background-color: blue;
 }
 
+#battleship>* {
+  border: 1px solid whitesmoke;
+}
 
-body {
-  margin: 3%;
+#battleship>*:hover {
+  cursor: pointer;
+  border: 3px solid whitesmoke;
 }
 
 header {
@@ -60,10 +90,10 @@ h1 {
   /* font-family: 'Nerko One', cursive; */
   font-family: 'Permanent Marker', cursive;
   /* font-family: 'Sedgwick Ave Display', cursive; */
-  color:black;
+  color: black;
 }
 
- #logo a {
+#logo a {
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -94,8 +124,8 @@ h1 {
 }
 
 #links li a {
-text-decoration: none;
-width: 100%;
+  text-decoration: none;
+  width: 100%;
 }
 
 #form {
@@ -104,6 +134,22 @@ width: 100%;
   margin-top: 2rem;
   padding: 2rem;
   border: 1px solid red;
+  z-index: -1;
+}
+
+.formAnimation {
+  animation: goAway forwards 1.2s;
+
+}
+
+@keyframes goAway {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(-200%);
+  }
 }
 
 form {
@@ -147,6 +193,7 @@ button {
 }
 
 button:active{
+
   font-size: 1.5rem;
 }
 
@@ -156,14 +203,15 @@ button:active{
 
 /* about html */
 
-.background-img{
+.background-img {
   /* img from fabio on unplash free picture to use */
   background-image: url('/img/background-fabio-oyXis2kALVg-unsplash.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   text-shadow: white 0px 0px 2px;
-  position:relative; 
-  left:80px; top:2px;
+  position: relative;
+  left: 80px;
+  top: 2px;
   color: white;
 }
 

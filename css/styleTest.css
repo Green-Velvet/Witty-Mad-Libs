@@ -25,18 +25,9 @@
   margin: auto;
   margin-top: 5rem;
   text-align: center;
-  animation: slide-in 1s ease-in;
 }
 
-@keyframes slide-in {
-  from {
-    transform: translateX(-100%);
-  }
 
-  to {
-    transform: translateX(0%);
-  }
-}
 
 #container div {
   background-size: cover;

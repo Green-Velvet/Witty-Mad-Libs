@@ -27,6 +27,7 @@ for (let i = 0; i < cols; i++) {
 let hitCount = 0;
 
 let gameBoard = [
+
   [0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0],
@@ -53,7 +54,6 @@ function randomShips() {
 function getRandNum(max) {
   return Math.floor(Math.random() * max);
 }
-
 
 grid.addEventListener('click', fireTorpedo, false);
 
@@ -96,16 +96,13 @@ function fireTorpedo(e) {
       if (hitCount === 6) {
         alert("All enemy battleships have been defeated! You win!");
         renderMadlib();
+        updateStorage();
 
       }
     } else if (gameBoard[row][col] > 1) {
       alert('Stop wasting your torpedos! You already fired at this location.');
     }
   }
-  updateStorage();
+  
   e.stopPropagation();
 }
-
-
-
-
