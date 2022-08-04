@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
+.bg {
+  background: url(/img/water-81.gif);
+  color: white;
+  font-size: 2rem;
+  border: 1px solid black;
+}
+
+.bg:hover {
+  border: 3px solid greenyellow;
+  color: green;
+  cursor: pointer;
+  font-size: 5rem;
+}
+
+#container {
+  display: grid;
+  gap: 3px;
+  grid-template-columns: repeat(5, 5rem);
+  grid-template-rows: repeat(5, 5rem);
+  width: 30%;
+  margin: auto;
+  margin-top: 5rem;
+  text-align: center;
+  animation: slide-in 1s ease-in;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+#container div {
+  background-size: cover;
+  background-attachment: fixed;
+}
