@@ -7,6 +7,10 @@ let cols = 5;
 let ships = 6;
 let userCount = 6;
 
+let reroll = document.getElementById('random2');
+let madlib = document.getElementById('madlib');
+
+
 
 const grid = document.getElementById('battleship');
 
@@ -94,15 +98,31 @@ function fireTorpedo(e) {
       hitCount++;
 
       if (hitCount === 6) {
-        alert("All enemy battleships have been defeated! You win!");
+        alert("Yargh! Here's yer booty!");
         renderMadlib();
         updateStorage();
-
+        reroll.addEventListener('click', randomButton);
       }
     } else if (gameBoard[row][col] > 1) {
-      alert('Stop wasting your torpedos! You already fired at this location.');
+      alert('Yer wasting yer cannons, Matey! That spot has already been shot.');
     }
   }
   
   e.stopPropagation();
+}
+
+function randomButton(e){
+  e.preventDefault();
+  let message = getElementById('demo:first-child');
+  message.remove();
+  renderMadlib();
+}
+
+function stripTags (original) {
+  // (A1) CREATE DUMMY ELEMENT & ATTACH HTML
+  let ele = document.createElement("div");
+  ele.innerHTML = original;
+ 
+  // (A2) USE TEXT CONTENT TO STRIP TAGS
+  return ele.textContent;
 }

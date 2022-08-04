@@ -62,18 +62,26 @@
         </fieldset>
       </form>
     </div>
-    
-    <section  id="battleshipAnimation">      
-      <div id="battleship" onclick="audio.play();">
-      </div>
+
+
+    <section  id="battleshipAnimation">  
+      <div class="directions-box">
+        <p id="directions">Go on, Landlubber! Try to find me ships.</p>
+      </div>    
+      <div id="battleship" onclick="audio.play();"></div>
+
       <div id="audioControl">
         <audio controls autoplay loop>
+
           <source src="/sounds/waves-crashing.wav" type="audio/wav">Unsupported Audio.
         </audio>
       </div>
     </section>
-    
+
+    <section id="madbox">
     <div id="madlib"><div>
+      <button id="random2" type="submit">Random</button>
+    </section>
   </main>
   <footer>
   </footer>
