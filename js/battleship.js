@@ -29,7 +29,7 @@ let gameBoard = [
   [0, 0, 0, 0, 1],
   [0, 0, 1, 0, 0],
   [0, 0, 0, 0, 1],
-]
+];
 
 grid.addEventListener("click", fireTorpedo, false);
 
@@ -59,7 +59,3 @@ function fireTorpedo(e) {
   }
   e.stopPropagation();
 }
-
-
-
-
