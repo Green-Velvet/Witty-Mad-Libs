@@ -70,13 +70,13 @@ function fireTorpedo(e) {
     let col = e.target.id.substring(2, 3);
 
     if (gameBoard[row][col] === 0) {
-      e.target.style.background = "url(" + 'img/ezgif-1-0417f6fcf8.gif' + ")";
+      e.target.style.background = 'url(\' img/ezgif-1-0417f6fcf8.gif\')';
       miss.play();
 
       gameBoard[row][col] = 3;
 
     } else if (gameBoard[row][col] === 1) {
-      e.target.style.background = "url(" + 'https://media4.giphy.com/media/d4aVHC1HKnButuXC/giphy.gif?cid=ecf05e470mrkkuiwg54gbnpz7ad2bt0qubk8kt4t2ffiqf5h&rid=giphy.gif&ct=g' + ")";
+      e.target.style.background = 'url( \'https://media4.giphy.com/media/d4aVHC1HKnButuXC/giphy.gif?cid=ecf05e470mrkkuiwg54gbnpz7ad2bt0qubk8kt4t2ffiqf5h&rid=giphy.gif&ct=g\')';
       hit.play();
       if (userCount === 6) {
         userCount--;
@@ -90,20 +90,20 @@ function fireTorpedo(e) {
         verbArr.push(prompt('You sunk another one, Matey! A VERB is what we want.'));
       } else if (userCount === 3) {
         userCount--;
-        verbArr.push(prompt("Aargh, yet another good ship sunk! We'll be wanting another VERB from you."));
+        verbArr.push(prompt('Aargh, yet another good ship sunk! We\'ll be wanting another VERB from you.'));
       } else if (userCount === 2) {
         userCount--;
-        adjArr.push(prompt("Avast, Landlubber! You're really shaking down me crew. This time, I want an ADJECTIVE from you."));
+        adjArr.push(prompt('Avast, Landlubber! You\'re really shaking down me crew. This time, I want an ADJECTIVE from you.'));
       } else if (userCount === 1) {
         userCount--;
-        adjArr.push(prompt("Davey Jones claims the last ship! One last ADJECTIVE wouldn't be to much to ask for, would it?"));
+        adjArr.push(prompt('Davey Jones claims the last ship! One last ADJECTIVE wouldn\'t be to much to ask for, would it?'));
       }
       gameBoard[row][col] = 2;
 
       hitCount++;
 
       if (hitCount === 6) {
-        alert("Yargh! Here's yer booty!");
+        alert('Yargh! Here\'s yer booty!');
         renderMadlib();
         updateStorage();
         reroll.addEventListener('click', randomButton);
