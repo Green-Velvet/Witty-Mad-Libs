@@ -65,9 +65,9 @@ function handleSubmit(event) {
   event.preventDefault();
   //dom manip to add class that will add animation
   document.getElementById('battleshipAnimation').setAttribute('class', 'gridAppears');
+  document.getElementById('battleshipAnimation').setAttribute('class', 'battleship-section');
   document.getElementById('form').setAttribute('class', 'formAnimation');
   document.getElementById('logoImg').setAttribute('class', 'logoImgSlide');
-  document.getElementById('battleshipAnimation').setAttribute('class', 'battleship-section');
 }
 
 function updateStorage() {
@@ -105,4 +105,5 @@ function getStorage() {
 //Executable Code
 
 getStorage();
+
 form.addEventListener('submit', handleSubmit);

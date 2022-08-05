@@ -72,7 +72,7 @@ function fireTorpedo(e) {
       gameBoard[row][col] = 3;
 
     } else if (gameBoard[row][col] === 1) {
-      e.target.style.background = 'red';
+      e.target.style.background = "url(" + 'https://media4.giphy.com/media/d4aVHC1HKnButuXC/giphy.gif?cid=ecf05e470mrkkuiwg54gbnpz7ad2bt0qubk8kt4t2ffiqf5h&rid=giphy.gif&ct=g' + ")";
       if (userCount === 6) {
         userCount--;
         nounArr.push(prompt('Ahoy! Good shot! Now give us a NOUN.'));
@@ -108,7 +108,7 @@ function fireTorpedo(e) {
       alert('Yer wasting yer cannons, Matey! That spot has already been shot.');
     }
   }
-  
+
   e.stopPropagation();
 }
 
