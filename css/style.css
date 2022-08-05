@@ -229,11 +229,6 @@ button:active {
   justify-content: center;
 }
 
-#madlib {
-  font-size: 30px;
-  display: flex;
-  justify-content: center;
-}
 
 .directions-box {
   display: flex;
@@ -313,7 +308,7 @@ a:hover {
   grid-column-end: 2;
   grid-row-start: 1;
   grid-row-end: 2;
-  }
+}
 
 #bert img {
   margin-right: 10px;
@@ -357,14 +352,14 @@ a:hover {
 
 #jordan a {
   margin-bottom: 10px;
- }
+}
 
 #jeff {
   grid-column-start: 3;
   grid-column-end: 4;
   grid-row-start: 3;
   grid-row-end: 4;
- 
+
 }
 
 
@@ -374,7 +369,7 @@ a:hover {
   width: 200px;
   border-radius: 20px;
   float: right;
- }
+}
 
 #aboutfoot {
   /* font-family:'Nerko One', cursive; */
@@ -389,14 +384,17 @@ a:hover {
 #madlibArt {
   width: max-content;
   background: url(https://static.vecteezy.com/system/resources/thumbnails/003/578/954/small_2x/pine-wood-plank-texture-free-vector.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   margin: auto;
-  padding: 5rem;
+  padding: 3rem;
   display: flex;
   justify-content: center;
   border: 2px solid white;
-  /* font-family: cursive; */
-  font-size: 10rem;
-  color: red;
+  font-family: cursive;
+  font-size: 5rem;
+  color: white;
+  -webkit-text-stroke: 1px black;
   animation: move-up forwards .1s;
 }
 
@@ -410,11 +408,11 @@ a:hover {
   }
 }
 
-.social-media{
+.social-media {
   height: 70px;
 }
 
-#headlogo > a > img{
-border-radius: 10px;
-border: 5px solid blue;
+#headlogo>a>img {
+  border-radius: 10px;
+  border: 5px solid blue;
 }
