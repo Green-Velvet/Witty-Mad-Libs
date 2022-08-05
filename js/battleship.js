@@ -7,6 +7,10 @@ let cols = 5;
 let ships = 6;
 let userCount = 6;
 
+let reroll = document.getElementById('random2');
+let madlib = document.getElementById('madlib');
+
+
 
 const grid = document.getElementById('battleship');
 
@@ -81,10 +85,10 @@ function fireTorpedo(e) {
         verbArr.push(prompt('You sunk another one, Matey! A VERB is what we want.'));
       } else if (userCount === 3) {
         userCount--;
-        verbArr.push(prompt("Aargh, yet another good ship sunk! We'll be wanting another VERB you."));
+        verbArr.push(prompt("Aargh, yet another good ship sunk! We'll be wanting another VERB from you."));
       } else if (userCount === 2) {
         userCount--;
-        adjArr.push(prompt("Avast, Landlubber! You're really shaking down my crew. This time, I was an ADJECTIVE from you."));
+        adjArr.push(prompt("Avast, Landlubber! You're really shaking down me crew. This time, I want an ADJECTIVE from you."));
       } else if (userCount === 1) {
         userCount--;
         adjArr.push(prompt("Davey Jones claims the last ship! One last ADJECTIVE wouldn't be to much to ask for, would it?"));
@@ -94,15 +98,23 @@ function fireTorpedo(e) {
       hitCount++;
 
       if (hitCount === 6) {
-        alert("All enemy battleships have been defeated! You win!");
+        alert("Yargh! Here's yer booty!");
         renderMadlib();
         updateStorage();
-
+        reroll.addEventListener('click', randomButton);
       }
     } else if (gameBoard[row][col] > 1) {
-      alert('Stop wasting your torpedos! You already fired at this location.');
+      alert('Yer wasting yer cannons, Matey! That spot has already been shot.');
     }
   }
 
   e.stopPropagation();
 }
+
+function randomButton(e){
+  e.preventDefault();
+  let message = document.querySelector('#madlib p');
+  message.remove();
+  renderMadlib();
+}
+

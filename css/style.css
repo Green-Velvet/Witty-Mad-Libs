@@ -224,8 +224,20 @@ button:active {
   font-size: 1.5rem;
 }
 
+#madbox {
+  display: flex;
+  justify-content: center;
+}
+
 #madlib {
   font-size: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.directions-box {
+  display: flex;
+  justify-content: center;
 }
 
 audio {
