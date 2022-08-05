@@ -34,7 +34,7 @@ body {
   }
 
   to {
-    transform: translateY(-125%);
+    transform: translateY(-90%);
   }
 }
 
@@ -227,6 +227,8 @@ button:active {
   text-decoration: none;
   -webkit-text-stroke: 1px black;
   font-size: xx-large;
+  max-width: 80%;
+  word-wrap: break-word;
 }
 
 
@@ -391,6 +393,11 @@ a:hover {
   color: lightcoral;
 }
 
+#madbox {
+  display: flex;
+  justify-content: center;
+}
+
 #madlibArt {
   width: max-content;
   background: url(https://static.vecteezy.com/system/resources/thumbnails/003/578/954/small_2x/pine-wood-plank-texture-free-vector.jpg);
@@ -401,11 +408,12 @@ a:hover {
   display: flex;
   justify-content: center;
   border: 2px solid white;
-  font-family: cursive;
+  font-family: 'Bangers', cursive;
   font-size: 5rem;
   color: white;
   -webkit-text-stroke: 1px black;
   animation: move-up forwards .1s;
+  margin-top: 1rem;
 }
 
 @keyframes move-up {
