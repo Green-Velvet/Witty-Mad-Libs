@@ -62,13 +62,19 @@
     </div>
     <section  id="battleshipAnimation">  
           
-      <div id="battleship" onclick="audio.play();"></div>
+      <div id="battleship"></div>
       <div class="directions-box">
         <p id="directions">Go on, Landlubber! Try to find me ships!</p>
       </div>
       <div id="audioControl">
         <audio controls autoplay loop>
-          <source src="/sounds/drunken-sailor.wav" type="audio/wav">Unsupported Audio.
+          <source src="sounds/drunken-sailor.wav" type="audio/wav">Unsupported Audio.
+        </audio>
+        <audio id="targetHit">
+          <source src="sounds/water-bomb.wav" type="audio/wav">
+        </audio>
+        <audio id="targetMiss">
+          <source src="sounds/water-drop-stone.wav" type="audio/wav">
         </audio>
       </div>
       <div id='madbox'>

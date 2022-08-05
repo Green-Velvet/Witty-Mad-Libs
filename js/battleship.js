@@ -10,6 +10,9 @@ let userCount = 6;
 let reroll = document.getElementById('random2');
 let madlib = document.getElementById('madlib');
 
+const hit = document.getElementById('targetHit');
+const miss = document.getElementById('targetMiss');
+
 
 
 const grid = document.getElementById('battleship');
@@ -68,11 +71,13 @@ function fireTorpedo(e) {
 
     if (gameBoard[row][col] === 0) {
       e.target.style.background = "url(" + 'img/ezgif-1-0417f6fcf8.gif' + ")";
+      miss.play();
 
       gameBoard[row][col] = 3;
 
     } else if (gameBoard[row][col] === 1) {
       e.target.style.background = "url(" + 'https://media4.giphy.com/media/d4aVHC1HKnButuXC/giphy.gif?cid=ecf05e470mrkkuiwg54gbnpz7ad2bt0qubk8kt4t2ffiqf5h&rid=giphy.gif&ct=g' + ")";
+      hit.play();
       if (userCount === 6) {
         userCount--;
         nounArr.push(prompt('Ahoy! Good shot! Now give us a NOUN.'));
