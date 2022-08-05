@@ -67,7 +67,7 @@ function fireTorpedo(e) {
     let col = e.target.id.substring(2, 3);
 
     if (gameBoard[row][col] === 0) {
-      e.target.style.background = '#bbb';
+      e.target.style.background = "url(" + 'img/ezgif-1-0417f6fcf8.gif' + ")";
 
       gameBoard[row][col] = 3;
 
@@ -112,10 +112,9 @@ function fireTorpedo(e) {
   e.stopPropagation();
 }
 
-function randomButton(e){
+function randomButton(e) {
   e.preventDefault();
   let message = document.querySelector('#madlib p');
   message.remove();
   renderMadlib();
 }
-

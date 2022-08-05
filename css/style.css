@@ -16,10 +16,7 @@ body {
 #battleshipAnimation {
   display: none;
   justify-content: center;
-  /* background: url(https://images.unsplash.com/photo-1466188635785-8b5f35009981?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80); */
   background-size: contain;
-  /* position: relative; */
-  /* top: 30px; */
 }
 
 #battleshipAnimation.gridAppears {
@@ -118,9 +115,7 @@ header {
 
 h1 {
   font-size: 4rem;
-  /* font-family: 'Nerko One', cursive; */
   font-family: 'Permanent Marker', cursive;
-  /* font-family: 'Sedgwick Ave Display', cursive; */
   color: black;
 }
 
