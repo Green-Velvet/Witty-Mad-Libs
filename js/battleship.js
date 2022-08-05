@@ -102,6 +102,7 @@ function fireTorpedo(e) {
         renderMadlib();
         updateStorage();
         reroll.addEventListener('click', randomButton);
+        grid.removeEventListener('click', fireTorpedo, false);
       }
     } else if (gameBoard[row][col] > 1) {
       alert('Yer wasting yer cannons, Matey! That spot has already been shot.');

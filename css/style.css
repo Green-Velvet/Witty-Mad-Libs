@@ -282,7 +282,7 @@ html {
 #abouthead {
   height: 120px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
 }
 
@@ -313,7 +313,7 @@ a:hover {
   grid-column-end: 2;
   grid-row-start: 1;
   grid-row-end: 2;
-}
+  }
 
 #bert img {
   margin-right: 10px;
@@ -357,14 +357,16 @@ a:hover {
 
 #jordan a {
   margin-bottom: 10px;
-}
+ }
 
 #jeff {
   grid-column-start: 3;
   grid-column-end: 4;
   grid-row-start: 3;
   grid-row-end: 4;
+ 
 }
+
 
 #jeff img {
   margin-right: 10px;
@@ -372,7 +374,7 @@ a:hover {
   width: 200px;
   border-radius: 20px;
   float: right;
-}
+ }
 
 #aboutfoot {
   /* font-family:'Nerko One', cursive; */
@@ -380,7 +382,7 @@ a:hover {
   height: fit-content;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  font-size: 1.7rem;
+  font-size: .9rem;
   color: lightcoral;
 }
 
@@ -406,4 +408,13 @@ a:hover {
   to {
     transform: translateY(00%);
   }
+}
+
+.social-media{
+  height: 70px;
+}
+
+#headlogo > a > img{
+border-radius: 10px;
+border: 5px solid blue;
 }
